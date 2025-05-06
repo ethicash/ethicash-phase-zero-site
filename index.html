@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethicash | Access to Money is Your Right</title>
+  <link rel="icon" href="https://img.freepik.com/free-vector/dark-green-abstract-background_1100-129.jpg?t=st=1746522678~exp=1746526278~hmac=c680ee95aec51f9ee57011073378879ca9171a7bc542d851fc0c1fdc4f61c74f&w=900">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Sulphur+Point:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent-color: #7ED957;
+      --bg-color: #000000;
+      --text-color: #E0E0E0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Nunito', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.2);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      animation: fadeIn 2s ease-out forwards;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-family: 'Sulphur Point', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      color: white;
+      opacity: 0.3;
+      transform: translateY(20px);
+      animation: fadeInUp 1.5s ease-out forwards;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+    }
+
+    h1 .highlight {
+      display: block;
+      font-weight: 700;
+      color: var(--accent-color);
+      opacity: 0.3;
+      font-style: italic;
+      font-size: clamp(2rem, 8vw, 4rem);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 2rem;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      color: var(--text-color);
+      font-family: 'Nunito', sans-serif;
+      animation: fadeIn 3s ease-out forwards;
+      padding: 0 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="C:\Users\Saffat Habib\Downloads\852435-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="content">
+    <h1>Soon Money Will<br><span class="highlight">Glow Differently</span></h1>
+  </div>
+  <footer>Ethicash © <span id="year"></span></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const video = document.getElementById('bg-video');
+    video.playbackRate = 0.5;
+  </script>
+</body>
+</html>
